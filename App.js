@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import MyStack from './src/navigater/stack';
 import Login from './src/component/login';
 import SignIn from './src/component/signin';
+import LoginSigninSuccess from './src/component/loginSigninSuccess';
 const Stack = createNativeStackNavigator();
 const App = () => {
   
@@ -13,6 +14,7 @@ const App = () => {
           <Stack.Navigator>
               <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}/>
               <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }} />
+              <Stack.Screen name="LoginSigninSuccess" component={LoginSigninSuccess} options={{ headerShown: false }}/>
           </Stack.Navigator>
       </NavigationContainer>
   );

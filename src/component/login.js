@@ -10,19 +10,20 @@ const Login = ({navigation})=>{
 
     const handleLogin =()=>{
        
-        const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-        if(!maSvRegex.test(maSv)){
-            console.log("ma sinh vien khong hop le")
-        }
+        // const passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        // if(!maSvRegex.test(maSv)){
+        //     console.log("ma sinh vien khong hop le")
+        // }
        
-        else{
-            if(!passRegex.test(pass)){
-                console.log("mat khau phai co it nhat 1 chu cai hoa 1 chu cai thuong va mot ki tu dac biet và không được dưới 8 kí tự")
-            }
-            else{
-                console.log("đăng nhập thành công")
-            }
-        }
+        // else{
+        //     if(!passRegex.test(pass)){
+        //         console.log("mat khau phai co it nhat 1 chu cai hoa 1 chu cai thuong va mot ki tu dac biet và không được dưới 8 kí tự")
+        //     }
+        //     else{
+        //         console.log("đăng nhập thành công")
+        //     }
+        // }
+            navigation.navigate("LoginSigninSuccess",{isLogin: true, isSignin: false})
     }
 
    

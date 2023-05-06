@@ -2,43 +2,61 @@ import React, { useState } from 'react';
 import { ScrollView, TextInput, Button, TouchableOpacity, Text, StyleSheet,View ,Image, Keyboard} from 'react-native';
 import myImage from "../asset/img/Group_4.png"
 import AppStyle from '../theme';
-const SignIn = () => {
+import LoginSigninSuccess from './loginSigninSuccess';
+
+const SignIn = ({ navigation }) => {
   const [name, setName] = useState('');
   const [studentId, setStudentId] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [inputErrors,setInputErrors] =useState({}); 
+  const [error, setError] = useState(false);
 
   const handleRegistration = () => {
     setInputErrors({});
 
     const maSvRegex = /^[aA]\d{5}$/;
     // Validate fields
-    const errors = {};
+    let errors = {};
     if (!name) {
       errors.name = 'Họ và tên không được để trống';
+      setError(true);
     }
     if (!studentId) {
       errors.studentId = 'Mã sinh viên không được để trống';
+      setError(true);
     }
     if (!phone) {
       errors.phone = 'Số điện thoại không được để trống';
+      setError(true);
     }
     if (!password) {
       errors.password = 'Mật khẩu không được để trống';
+      setError(true);
     }
     if (!confirmPassword) {
       errors.confirmPassword = 'Xác nhận mật khẩu không được để trống';
+      setError(true);
     }
     if (password !== confirmPassword) {
       errors.confirmPassword = 'Xác nhận mật khẩu không khớp';
+      setError(true);
     }
     if (studentId&&(maSvRegex.test(studentId)===false))
     {
       errors.studentIdNotValid="mã sinh viên không hợp lệ"
+      setError(true);
     }
-    setInputErrors(errors);
+   
+    if(errors){
+      setInputErrors(errors);
+      
+    }else{
+      
+    }
+    navigation.navigate("LoginSigninSuccess", {isLogin: false, isSignin: true});
+    
   };
 
   return (

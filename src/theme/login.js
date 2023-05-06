@@ -2,8 +2,6 @@ import { Button, StyleSheet } from "react-native";
 
 const StyleLogin =StyleSheet.create(
   {
-
-   
     
     title:{
      

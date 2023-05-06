@@ -14,7 +14,6 @@ const shareCss =StyleSheet.create(
             bottom:0,
             color:"#3A3A3A",
             position: 'absolute',
-            bottom: 0,
             fontSize: 12,
             
           },
@@ -65,7 +64,8 @@ const shareCss =StyleSheet.create(
             color:"#3A3A3A",
             marginHorizontal:15,
             fontWeight:"700",
-          
+            maxWidth:240,
+            minWidth: 160,
           },
           titleSub:{
             fontSize:17,
@@ -77,7 +77,16 @@ const shareCss =StyleSheet.create(
             fontSize:12,
             color:"red",
             textAlign:"center"
+          },
+          waitText: {
+            textAlign: 'center',
+            marginVertical: 10,
+            bottom:64,
+            color:"#3A3A3A",
+            position: 'absolute',
+            fontSize: 16,
           }
+
     }
 )
 export default shareCss
