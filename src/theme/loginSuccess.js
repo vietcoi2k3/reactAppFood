@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const StyleLoginSuccess = StyleSheet.create({
     container: {
         top:156,
-        left: 136,
+        left: 148,
         position: 'absolute',
     },
     card:{
@@ -18,17 +18,26 @@ const StyleLoginSuccess = StyleSheet.create({
         marginTop:-60,
 },
     cardImage :{
-        height:60,
-        // width:10,
-        borderRadius:30,
-        flex: 1,
-        margin: 12,
+        height:100,
+        width:100,
+        borderRadius:50,
+        flex: 0.75,
+        marginLeft: 12,
+        marginRight: 8,
+        marginTop: 12,
+        marginBottom: 12,
+        emoji : {
+            fontSize: 52,
+            fontFamily: 'Segoe UI Emoji',
+            textAlign:"center",
+            marginTop: 12,
+        }
     },
     cardContent:{
         flex: 2
     },
     cardText:{
-        fontSize: 20,
+        fontSize: 24,
         fontWeight: 700,
     },
     cardPhone:{
@@ -37,7 +46,9 @@ const StyleLoginSuccess = StyleSheet.create({
     titleMain:{
         left: 20,
         top: -88,
-        marginBottom:12
+        marginBottom:12,
+        textAlign:"center",
+        maxWidth:260
     }
 })
 

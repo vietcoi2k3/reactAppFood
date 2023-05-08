@@ -10,9 +10,12 @@ function LoginSigninSuccess({route}) {
            <View style={AppStyle.StyleLoginSuccess.container}>
                 <Image source={success}/>
            </View>
-           <Text style={[AppStyle.shareCss.titleMain, AppStyle.StyleLoginSuccess.titleMain] }>{isLogin ? 'Đăng nhập thành công!' : 'Đăng kí thành công!'}</Text>
+           <Text style={[AppStyle.shareCss.titleMain, AppStyle.StyleLoginSuccess.titleMain] }>{isLogin ?` Đăng nhập ${'\n'} thành công! `: `Đăng kí ${"\n"} thành công!`}</Text>
            { isSignin &&  <View style={AppStyle.StyleLoginSuccess.card} >
-                <Image source={success} style={AppStyle.StyleLoginSuccess.cardImage}/>
+            <View style={AppStyle.StyleLoginSuccess.cardImage}>
+                <Text style={AppStyle.StyleLoginSuccess.cardImage.emoji}>😥</Text>
+            </View>
+                    
                 <View style={AppStyle.StyleLoginSuccess.cardContent}>
                     <Text style={AppStyle.StyleLoginSuccess.cardText}>Nguyen Thanh Long</Text>
                     <Text style={AppStyle.StyleLoginSuccess.cardPhone}>A44306 | 0123456789</Text>

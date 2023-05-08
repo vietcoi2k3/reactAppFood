@@ -1,4 +1,5 @@
 import { Button, StyleSheet } from "react-native";
+import{ colors} from '../common/colors'
 
 const StyleLogin =StyleSheet.create(
   {
@@ -14,9 +15,7 @@ const StyleLogin =StyleSheet.create(
     },
 
     buttonRegister:{
-      
-    
-      backgroundColor:"#4E399E"
+      backgroundColor:colors.SECONDARY
     },
     bot:{
       marginTop:100

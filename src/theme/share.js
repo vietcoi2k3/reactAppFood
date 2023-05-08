@@ -1,4 +1,5 @@
 import { Button, StyleSheet } from "react-native";
+import { colors } from "../common/colors";
 
 const shareCss =StyleSheet.create(
     {
@@ -44,7 +45,7 @@ const shareCss =StyleSheet.create(
             
           },
           button:{
-            backgroundColor:"#E45552",
+            backgroundColor:colors.PRIMARY,
             fontWeight:"700",
             borderRadius:20,
             marginTop:10,
@@ -64,8 +65,6 @@ const shareCss =StyleSheet.create(
             color:"#3A3A3A",
             marginHorizontal:15,
             fontWeight:"700",
-            maxWidth:240,
-            minWidth: 160,
           },
           titleSub:{
             fontSize:17,
